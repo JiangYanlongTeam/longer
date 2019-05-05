@@ -24,7 +24,7 @@ public class LoginController {
     }
 
     @ResponseBody
-    @RequestMapping(value ="/execute", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value ="/ex.pdf", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public DPFResponse execute2PDF(@Valid @RequestBody DPFBean dpfBean, BindingResult bindingResult) {
         return executeService.execute(dpfBean,bindingResult);
     }
