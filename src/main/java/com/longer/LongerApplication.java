@@ -31,7 +31,6 @@ public class LongerApplication {
         fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
         //3、在convert中添加配置信息
         fastConverter.setFastJsonConfig(fastJsonConfig);
-
         return new HttpMessageConverters(fastConverter);
     }
 }
