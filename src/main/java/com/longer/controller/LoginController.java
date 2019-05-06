@@ -14,18 +14,8 @@ import java.util.List;
 
 @RestController
 public class LoginController {
-
-    @Autowired
-    ExecuteService executeService;
-
     @RequestMapping("/")
     public ModelAndView index(){
         return new ModelAndView("login.html");
-    }
-
-    @ResponseBody
-    @RequestMapping(value ="/ex.pdf", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-    public DPFResponse execute2PDF(@Valid @RequestBody DPFBean dpfBean, BindingResult bindingResult) {
-        return executeService.execute(dpfBean,bindingResult);
     }
 }

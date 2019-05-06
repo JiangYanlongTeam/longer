@@ -1,31 +1,23 @@
 package com.longer.bean;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@JsonAutoDetect
 public class DPFResponse {
     private String msg;
     private String filepath;
     private String status;
 
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public String getFilepath() {
-        return filepath;
-    }
-
-    public void setFilepath(String filepath) {
-        this.filepath = filepath;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    @Override
+    public String toString() {
+        return "DPFResponse{" +
+                "msg='" + msg + '\'' +
+                ", filepath='" + filepath + '\'' +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

@@ -1,7 +1,14 @@
 package com.longer.bean;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.validation.constraints.NotBlank;
 
+@Setter
+@Getter
+@JsonAutoDetect
 public class DPFBean {
 
     @NotBlank(message = "filename不能为空")
@@ -15,59 +22,16 @@ public class DPFBean {
     private String password;
     private String ecologyurl;
 
-    public String getEcologyurl() {
-        return ecologyurl;
-    }
-
-    public void setEcologyurl(String ecologyurl) {
-        this.ecologyurl = ecologyurl;
-    }
-
-    public String getIsecology() {
-        return isecology;
-    }
-
-    public void setIsecology(String isecology) {
-        this.isecology = isecology;
-    }
-
-    public String getLoginVeri() {
-        return loginVeri;
-    }
-
-    public void setLoginVeri(String loginVeri) {
-        this.loginVeri = loginVeri;
-    }
-
-    public String getLoginid() {
-        return loginid;
-    }
-
-    public void setLoginid(String loginid) {
-        this.loginid = loginid;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFilename() {
-        return filename;
-    }
-
-    public void setFilename(String filename) {
-        this.filename = filename;
-    }
-
-    public String getHtmlpath() {
-        return htmlpath;
-    }
-
-    public void setHtmlpath(String htmlpath) {
-        this.htmlpath = htmlpath;
+    @Override
+    public String toString() {
+        return "DPFBean{" +
+                "filename='" + filename + '\'' +
+                ", htmlpath='" + htmlpath + '\'' +
+                ", isecology='" + isecology + '\'' +
+                ", loginVeri='" + loginVeri + '\'' +
+                ", loginid='" + loginid + '\'' +
+                ", password='" + password + '\'' +
+                ", ecologyurl='" + ecologyurl + '\'' +
+                '}';
     }
 }
